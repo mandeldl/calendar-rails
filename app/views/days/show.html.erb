@@ -6,8 +6,8 @@
     <h3 class="name"><%= event.name %></h3>
     <p>
       <!-- Format an event's 'from' time and 'to' time so they display in the format "9:00 pm" -->
-      <span class="from">  </span>  -  <span class="to">  </span>
+      <span class="from"> <%= event.from.strftime('%I:%M %p') %> </span>  -  <span class="to"> <%= event.to.strftime('%I:%M %p') %> </span>
     </p>
-    <p class="location">  </p>
+    <p class="location"> <%= event.location %> </p>
   </div>
 <% end %>
